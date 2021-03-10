@@ -10,6 +10,7 @@ ZSH_THEME="stu"
 # Plugins
 plugins=(
 	git
+	fzf
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
@@ -29,10 +30,6 @@ alias colortest="~/.config/zsh/functions/colortest"
 source $HOME/.keychain/$HOST-sh
 
 # Plugin Configurations
-
-## fzf
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
 
 ## zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
