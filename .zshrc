@@ -24,9 +24,6 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias colortest="~/.config/zsh/functions/colortest"
 
-# SSH Agent
-eval $(ssh-agent) &>/dev/null
-
 # Keychain
 /usr/bin/keychain -q --nogui $HOME/.ssh/github
 source $HOME/.keychain/$HOST-sh
