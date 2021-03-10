@@ -24,13 +24,12 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias colortest="~/.config/zsh/functions/colortest"
 
-# Key Bindings
-#
-# fzf
+# Plugin Configurations
+
+## fzf
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
-# zsh-autosuggestions
+## zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
-bindkey -s '^o' 'lfcd\n'
-
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#444444'
