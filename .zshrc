@@ -24,6 +24,9 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias colortest="~/.config/zsh/functions/colortest"
 
+# SSH Agent
+{ eval $(ssh-agent); ssh-add ~/.ssh/github } &>/dev/null
+
 # Plugin Configurations
 
 ## fzf
