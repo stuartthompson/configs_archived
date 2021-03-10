@@ -25,7 +25,11 @@ source $ZSH/oh-my-zsh.sh
 alias colortest="~/.config/zsh/functions/colortest"
 
 # SSH Agent
-{ eval $(ssh-agent); ssh-add ~/.ssh/github } &>/dev/null
+eval $(ssh-agent) &>/dev/null
+
+# Keychain
+/usr/bin/keychain -q --nogui $HOME/.ssh/github
+source $HOME/.keychain/$HOST-sh
 
 # Plugin Configurations
 
