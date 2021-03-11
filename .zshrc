@@ -1,6 +1,6 @@
 # tmux: run on startup
 #  The guard condition prevents nesting when tmux runs zsh internally
-if [ "$TMUX"  == "" ]; then tmux; fi
+if [ "$TMUX"  = "" ]; then tmux; fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/stu/.oh-my-zsh"
