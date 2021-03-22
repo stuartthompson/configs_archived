@@ -11,6 +11,9 @@ highlight CursorLineNr cterm=bold ctermfg=3
 set colorcolumn=80,120
 highlight ColorColumn ctermbg=1 guibg=#8888ff
 
+" Tabs
+set tabstop=4
+
 " Highlighted Yank
 highlight HighlightedyankRegion cterm=reverse gui=reverse
 
