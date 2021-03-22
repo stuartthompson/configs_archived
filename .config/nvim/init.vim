@@ -12,7 +12,7 @@ set colorcolumn=80,120
 highlight ColorColumn ctermbg=1 guibg=#8888ff
 
 " Tabs
-set tabstop=4
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Highlighted Yank
 highlight HighlightedyankRegion cterm=reverse gui=reverse
