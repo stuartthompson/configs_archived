@@ -14,6 +14,12 @@ highlight ColorColumn ctermbg=1 guibg=#8888ff
 " Tabs
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+" Special Characters (tab, trailing spaces, carriage returns)
+highlight SpecialKey ctermfg=3
+highlight NonText ctermfg=3
+set listchars=trail:␣
+set list
+
 " Highlighted Yank
 highlight HighlightedyankRegion cterm=reverse gui=reverse
 
