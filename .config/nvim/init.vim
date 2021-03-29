@@ -3,13 +3,9 @@ syntax on
 " Line numbers
 " -- Relative line numbering
 set number relativenumber
-" -- Colors (lines: orange, current: yellow)
-highlight LineNr ctermfg=3 gui=bold guifg=black
-highlight CursorLineNr cterm=bold ctermfg=3
 
 " Rulers
 set colorcolumn=80,120
-highlight ColorColumn ctermbg=1 guibg=#8888ff
 
 " Tabs
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -37,6 +33,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug 'machakann/vim-highlightedyank'
 
+" Syntax
+Plug 'vim-syntastic/syntastic'
+
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -58,3 +57,12 @@ let g:mkdp_open_to_the_world = 1
 
 " Snippets
 source ~/.config/nvim/snippets.vim
+
+" Theme
+source ~/.config/nvim/theme/stu-theme.vim
+
+" Maps
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+            \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+            \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
