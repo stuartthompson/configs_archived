@@ -55,3 +55,6 @@ call plug#end()
 " Markdown Preview
 " -- Open MarkdownPreview browser to more than local (lets WSL host see it)
 let g:mkdp_open_to_the_world = 1
+
+" Snippets
+source ~/.config/nvim/snippets.vim
