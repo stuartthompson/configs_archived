@@ -183,4 +183,4 @@ call s:h("yamlKeyValueDelimiter", { "fg": s:gray })
 " +--------------------------+
 " | YAML Syntax Highlighting |
 " +--------------------------+
-call s:h("markdownLinkTest", { "fg": s:blue })
+call s:h("markdownLinkText", { "fg": s:blue })
