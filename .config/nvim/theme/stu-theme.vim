@@ -172,3 +172,15 @@ call s:h("rustDeriveTrait", { "fg": s:darkred })
 " Testing
 call s:h("rustAssert", { "fg": s:blue })
 
+" +--------------------------+
+" | YAML Syntax Highlighting |
+" +--------------------------+
+call s:h("yamlPlainScalar", { "fg": s:yellow })
+call s:h("yamlBlockMappingKey", { "fg": s:darkgreen })
+call s:h("yamlFlowIndicator", { "fg": s:orange })
+call s:h("yamlKeyValueDelimiter", { "fg": s:gray })
+
+" +--------------------------+
+" | YAML Syntax Highlighting |
+" +--------------------------+
+call s:h("markdownLinkTest", { "fg": blue })
