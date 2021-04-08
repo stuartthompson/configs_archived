@@ -45,7 +45,7 @@ Plug 'airblade/vim-rooter'
 Plug 'rust-lang/rust.vim'
 
 " Debugging
-Plugin 'puremourning/vimspector'
+Plug 'puremourning/vimspector'
 
 " Utilities
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
