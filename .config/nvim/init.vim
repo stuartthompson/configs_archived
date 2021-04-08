@@ -44,6 +44,9 @@ Plug 'airblade/vim-rooter'
 " Language support
 Plug 'rust-lang/rust.vim'
 
+" Debugging
+Plugin 'puremourning/vimspector'
+
 " Utilities
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -60,6 +63,9 @@ source ~/.config/nvim/snippets.vim
 
 " Theme
 source ~/.config/nvim/theme/stu-theme.vim
+
+" Termdebug
+packadd termdebug
 
 " Maps
 map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
