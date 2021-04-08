@@ -67,6 +67,10 @@ source ~/.config/nvim/theme/stu-theme.vim
 " Termdebug
 packadd termdebug
 
+" Vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_install_gadgets = [ 'CodeLLDB' ]
+
 " Maps
 map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
             \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
