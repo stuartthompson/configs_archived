@@ -1,5 +1,8 @@
 syntax on
 
+" Leader
+let mapleader=' '
+
 " Line numbers
 " -- Relative line numbering
 set number relativenumber
@@ -36,10 +39,11 @@ Plug 'machakann/vim-highlightedyank'
 " Syntax
 Plug 'vim-syntastic/syntastic'
 
-" Fuzzy finder
+" File System
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+Plug 'preservim/nerdtree'
 
 " Language support
 Plug 'rust-lang/rust.vim'
@@ -57,6 +61,9 @@ call plug#end()
 " Markdown Preview
 " -- Open MarkdownPreview browser to more than local (lets WSL host see it)
 let g:mkdp_open_to_the_world = 1
+
+" File System
+nnoremap <leader>f :NERDTree
 
 " Snippets
 source ~/.config/nvim/snippets.vim
