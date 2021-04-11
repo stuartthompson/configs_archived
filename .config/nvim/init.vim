@@ -3,6 +3,9 @@ syntax on
 " Leader
 let mapleader=' '
 
+" Show commands
+set showcmd
+
 " Line numbers
 " -- Relative line numbering
 set number relativenumber
@@ -63,7 +66,7 @@ call plug#end()
 let g:mkdp_open_to_the_world = 1
 
 " File System
-nnoremap <leader>f :NERDTree
+nnoremap <leader>f :NERDTree<CR>
 
 " Snippets
 source ~/.config/nvim/snippets.vim
