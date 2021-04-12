@@ -50,13 +50,13 @@ output="%{u$ucol}%{+u}%{F#888888}"
 
 # Append success, running, and failed job counts
 if [ $numpass != 0 ]; then
-    output="$output %{F#00ff00}$numpass"
+    output="$output %{F#00ff00} $numpass"
 fi
 if [ $numrunning != 0 ]; then
-    output="$output %{F#ff8800}$numrunning"
+    output="$output %{F#ff8800} $numrunning"
 fi
 if [ $numfail != 0 ]; then
-    output="$output %{F#ff0000}$numfail$failed"
+    output="$output %{F#ff0000} $numfail$failed"
 fi
 
 output="$output%{-u}"
