@@ -113,6 +113,12 @@ call s:h("Error",           { "fg": s:yellow,       "bg": s:darkpurple })
 " +-------------------------+
 call s:h("vimComment",      { "fg": s:darkgray })
 call s:h("vimCommand",      { "fg": s:darkgreen })
+call s:h("vimContinue",     {                       "bg": s:darkgray })
+
+" +----------------+
+" | NetRW Tree Bar |
+" +----------------+
+call s:h("netrwTreeBar",    { "fg": s:yellow,       "bg": s:darkblue })
 
 " +--------------------------+
 " | Rust Syntax Highlighting |
