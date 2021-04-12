@@ -22,7 +22,7 @@ failed=""
 
 for repo in $REPOS; do
     url="https://api.github.com/repos/$USER/$repo/actions/workflows/ci.yml/runs"
-    status="$(curl -u $TOKEN -H '$HACC' $url | $JQPARSE)"
+    status="$(curl -s -u $TOKEN -H '$HACC' $url | $JQPARSE)"
 
     if [ $status = "\"success\"" ]; then
         numpass=$((numpass+1))
@@ -32,4 +32,10 @@ for repo in $REPOS; do
     fi
 done
 
-echo "/ $numpass x $numfail $failed"
+if [ $numfail = 0 ]; then
+    output="%{u#008800}%{+u}%{F#888888} %{F#00ff00}$numpass%{-u}"
+else
+    output="%{u#880000}%{u+}%{F#888888} %{F#00ff00}$numpass %{F#ff0000}$numfail$failed%{u-}"
+fi
+
+echo $output
