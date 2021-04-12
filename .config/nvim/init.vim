@@ -1,5 +1,11 @@
 syntax on
 
+" Leader
+let mapleader=' '
+
+" Show commands
+set showcmd
+
 " Line numbers
 " -- Relative line numbering
 set number relativenumber
@@ -36,13 +42,17 @@ Plug 'machakann/vim-highlightedyank'
 " Syntax
 Plug 'vim-syntastic/syntastic'
 
-" Fuzzy finder
+" File System
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+Plug 'preservim/nerdtree'
 
 " Language support
 Plug 'rust-lang/rust.vim'
+
+" Debugging
+Plug 'puremourning/vimspector'
 
 " Utilities
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -55,14 +65,24 @@ call plug#end()
 " -- Open MarkdownPreview browser to more than local (lets WSL host see it)
 let g:mkdp_open_to_the_world = 1
 
+" File System
+nnoremap <leader>f :NERDTree<CR>
+
 " Snippets
 source ~/.config/nvim/snippets.vim
 
 " Theme
 source ~/.config/nvim/theme/stu-theme.vim
 
+" Termdebug
+packadd termdebug
+
+" Vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_install_gadgets = [ 'CodeLLDB' ]
+
 " Maps
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
             \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
             \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
