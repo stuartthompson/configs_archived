@@ -21,6 +21,13 @@ numrunning=0
 numfail=0
 failed=""
 
+# Check for internet access
+wget -q --tries=3 --timeout=20 --spider http://github.com > /dev/null
+if [ $? -ne 0 ]; then
+    echo "%{F#888888}睊 %{F#880000}offline"
+    exit 0
+fi
+
 for repo in $REPOS; do
     url="https://api.github.com/repos/$USER/$repo/actions/workflows/ci.yml/runs"
     status="$(curl -s -u $TOKEN -H '$HACC' $url | jq '.workflow_runs[0] | "\(.conclusion)\(.status)"')"
