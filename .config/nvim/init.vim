@@ -65,8 +65,9 @@ call plug#end()
 " -- Open MarkdownPreview browser to more than local (lets WSL host see it)
 let g:mkdp_open_to_the_world = 1
 
-" File System
+" NERDTree Config
 nnoremap <leader>f :NERDTree<CR>
+let g:NERDTreeShowHidden=1
 
 " Snippets
 source ~/.config/nvim/snippets.vim
