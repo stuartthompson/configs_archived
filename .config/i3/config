@@ -173,4 +173,4 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Set screen brightness to 70%
-# xrandr --output eDP-1 --brightness 0.7
+# exec_always xrandr --output eDP-1 --brightness 0.7

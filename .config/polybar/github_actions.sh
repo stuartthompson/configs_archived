@@ -9,7 +9,7 @@
 
 # Configure user and list of repos
 USER="stuartthompson"
-REPOS="table-format blog notes"
+REPOS="table-format blog notes docs"
 
 TOKEN="token:$GITHUB_ACTIONS_POLYBAR_TOKEN"
 HACC="Accept: application/vnd.github.v3+json"
@@ -24,7 +24,6 @@ failed=""
 # Check for internet access
 wget -q --tries=3 --timeout=20 --spider http://github.com > /dev/null
 if [ $? -ne 0 ]; then
-    echo "%{F#888888}睊 %{F#880000}offline"
     exit 0
 fi
 
