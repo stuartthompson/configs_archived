@@ -64,9 +64,10 @@ call plug#end()
 let g:mkdp_open_to_the_world = 1
 
 " NERDTree Config
-nnoremap <leader>f :NERDTree<CR>
+nnoremap <leader>f :tabnew<CR>:NERDTree<CR>
 let g:NERDTreeShowHidden=1
 let g:NERDTreeQuitOnOpen=1
+autocmd VimEnter * NERDTree
 
 " Snippets
 source ~/.config/nvim/snippets.vim
@@ -74,6 +75,12 @@ source ~/.config/nvim/snippets.vim
 " Syntax
 syntax enable
 filetype plugin indent on
+
+" Tab navigation
+nnoremap <leader>h :tabp<CR>
+nnoremap <leader>l :tabn<CR>
+nnoremap <leader>j :tabm -1<CR>
+nnoremap <leader>k :tabm +1<CR>
 
 " Theme
 source ~/.config/nvim/theme/stu-theme.vim
