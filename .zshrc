@@ -6,10 +6,10 @@ ZSH_THEME="stu"
 
 # Plugins
 plugins=(
-	git
-	fzf
-	zsh-autosuggestions
-	zsh-syntax-highlighting
+    git
+    fzf
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 # Source oh-my-zsh
