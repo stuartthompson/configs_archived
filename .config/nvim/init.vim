@@ -50,6 +50,7 @@ Plug 'preservim/nerdtree'
 
 " Language support
 Plug 'rust-lang/rust.vim'
+Plug 'pangloss/vim-javascript'
 
 " Utilities
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -65,9 +66,14 @@ let g:mkdp_open_to_the_world = 1
 " NERDTree Config
 nnoremap <leader>f :NERDTree<CR>
 let g:NERDTreeShowHidden=1
+let g:NERDTreeQuitOnOpen=1
 
 " Snippets
 source ~/.config/nvim/snippets.vim
+
+" Syntax
+syntax enable
+filetype plugin indent on
 
 " Theme
 source ~/.config/nvim/theme/stu-theme.vim
