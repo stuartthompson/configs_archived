@@ -11,6 +11,8 @@
 " snippet: struct
 nnoremap ,rs-struct :-1read $HOME/.config/nvim/snippets/rust/rs-struct.rs<CR>whi<space>
 
+" NOTE: This is a very silly snippet. I wrote this to learn more about them.
+"
 " snippet: /// documentation block
 "
 " /(<CR>                        - Find (
@@ -29,3 +31,4 @@ nnoremap ,rs-struct :-1read $HOME/.config/nvim/snippets/rust/rs-struct.rs<CR>whi
 " :noh<CR>                      - Remove highlight (from find/replace)
 " a                             - Go to insert mode with append
 nnoremap ,rs-/ /(<CR>yi(kp0i///<space>##mark##//////<space># Arguments//////<space>*<space>`<esc>:s/,/\/\/\/\ *\ `/g<CR>:s/`\ /`/g<CR>:s/:\zs[^\/]*//g<CR>:s/:/\` -/g<CR>:s/\/\/\//\r\/\/\//g<CR>/##mark##<CR>d8l:noh<CR>a
+
