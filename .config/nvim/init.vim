@@ -57,14 +57,25 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 call plug#end()
 
-" Plugin Configuration
+"''''''''''''''''''''''''''
+" Post-Plugin Configuration
+"..........................
+
+" Lightline configuration
+" Disable showing the mode in the bottom status bar (lightline does this now)
+set noshowmode
 "
+let g:lightline = {
+    \ 'colorscheme': 'stu-lightline-theme'
+    \ }
+
 " Markdown Preview
 " -- Open MarkdownPreview browser to more than local (lets WSL host see it)
 let g:mkdp_open_to_the_world = 1
 
 " NERDTree Config
-nnoremap <leader>f :tabnew<CR>:NERDTree<CR>
+nnoremap <leader>f :NERDTree<CR>
+nnoremap <leader>t :tabnew<CR>:NERDTree<CR>
 let g:NERDTreeShowHidden=1
 let g:NERDTreeQuitOnOpen=1
 autocmd VimEnter * NERDTree
@@ -76,7 +87,7 @@ source ~/.config/nvim/snippets.vim
 syntax enable
 filetype plugin indent on
 
-" Tab navigation
+" Tabs
 nnoremap <leader>h :tabp<CR>
 nnoremap <leader>l :tabn<CR>
 nnoremap <leader>j :tabm -1<CR>
@@ -85,10 +96,8 @@ nnoremap <leader>k :tabm +1<CR>
 " Theme
 source ~/.config/nvim/theme/stu-theme.vim
 
-" Termdebug
-packadd termdebug
-
 " Maps
+" Get the style underneath the cursor. (useful for coloring/theming)
 map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
             \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
             \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
