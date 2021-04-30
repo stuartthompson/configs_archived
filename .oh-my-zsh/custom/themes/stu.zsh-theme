@@ -18,7 +18,7 @@ function git_status() {
   if $(echo "$INDEX" | grep -E '^\?\? ' &> /dev/null); then
     STATUS="$PROMPT_UNTRACKED$STATUS"
   fi
- 
+
   # Look for added files
   if $(echo "$INDEX" | grep '^A  ' &> /dev/null); then
     STATUS="$PROMPT_ADDED$STATUS"
@@ -72,7 +72,7 @@ function git_status() {
   # Only output status if at least one state was found
   if [[ ! -z $STATUS ]]; then
     echo "%{$fg[cyan]%}]%{$fg[green]%}-%{$fg[cyan]%}[$STATUS%{$reset_color%}"
-  fi 
+  fi
 }
 
 # Prints git info
@@ -89,7 +89,7 @@ function git_info() {
 # ┌[working directory]-[git info]-[user@machine]
 # └> 
 PROMPT=$'
-%{$fg[green]%}┌%{$fg[cyan]%}[%{$fg[yellow]%}%~%{$fg[cyan]%}]%{$fg[green]%}-$(git_info)%{$fg[cyan]%}[%{$fg_bold[blue]%}%n%{$fg_bold[black]%}@%{$fg_bold[blue]%}%m%{$reset_color%}%{$fg[cyan]%}]
+%{$fg[green]%}┌%{$fg[cyan]%}[%{$fg[yellow]%}%~%{$fg[cyan]%}]%{$fg[green]%}-$(git_info)%{$fg[cyan]%}[%{$fg_bold[blue]%}%n%{$reset_color%}%{$fg[white]%}@%{$fg_bold[blue]%}%m%{$reset_color%}%{$fg[cyan]%}]
 %{$fg[green]%}└%{$fg_bold[green]%}> %{$reset_color%}'
 
 

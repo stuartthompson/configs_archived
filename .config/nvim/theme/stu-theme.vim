@@ -86,6 +86,8 @@ call s:h("vimSep",          { "fg": s:operator })
 call s:h("vimCommentTitle", { "fg": s:variable })
 call s:h("vimComment",      { "fg": s:comment })
 call s:h("vimParenSep",     { "fg": s:operator })
+call s:h("vimVar",          { "fg": s:variable })
+call s:h("vimOption",       { "fg": s:variable })
 
 " +----------------+
 " | NetRW Tree Bar |
