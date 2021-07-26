@@ -1,7 +1,7 @@
 # Git status symbols
 PROMPT_UNTRACKED="%{$fg_bold[red]%}u"
 PROMPT_ADDED="%{$fg_bold[green]%}+"
-PROMPT_DELETED="%{${bg[red]%}%{$fg_bold[white]%}x%{$reset_color%}"
+PROMPT_DELETED="%{$bg[red]%}%{$fg_bold[white]%}x%{$reset_color%}"
 PROMPT_RENAMED="%{$fg_bold[green]%}r"
 PROMPT_MODIFIED="%{$fg_bold[magenta]%}m"
 PROMPT_UNMERGED="%{$fg_bold[yellow]%}U"
