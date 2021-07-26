@@ -10,6 +10,10 @@ endif
 
 set background=dark
 
+" Error highlight
+hi Error ctermfg=15 ctermbg=1
+hi SpellBad ctermfg=15 ctermbg=1
+
 " Function to set highlights
 function! s:h(group, style)
     let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm : "NONE")
