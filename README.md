@@ -1,5 +1,6 @@
-**Archived: 2024-03-28**
-This repository is archived and is no longer being updated. It will be removed once I'm sure there is nothing else here I need.
+# Archived: 2024-03-28
+
+**This repository is archived and is no longer being updated. It will be removed once I'm sure there is nothing else here I need.**
 
 # Config Files
 
